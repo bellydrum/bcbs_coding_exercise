@@ -14,4 +14,8 @@ export default class AuthController {
     async register(userData) {
         return authService.register(userData)
     }
+
+    async validate(userData) {
+        return authService.validate(userData)
+    }
 }

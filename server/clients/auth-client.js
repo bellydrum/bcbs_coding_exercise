@@ -12,4 +12,18 @@ export default class AuthClient extends ReqResClient {
     async register(userData) {
         return this.post('register', userData)
     }
+
+    async validate(userData) {
+        const existingUsers = await this.getUsers()
+
+        let userIsValidated = false
+
+        existingUsers.data.forEach((user) => {
+            if (user.email === userData.email) {
+                userIsValidated = true
+            }
+        })
+
+        return userIsValidated;
+    }
 }

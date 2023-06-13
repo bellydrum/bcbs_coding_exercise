@@ -7,7 +7,9 @@ import UpdateResourceForm from "@/components/forms/UpdateResourceForm";
 
 export default {
   name: 'Home',
-  components: {UpdateResourceForm},
+  components: {
+    UpdateResourceForm,
+  },
   props: {
     msg: String
   }

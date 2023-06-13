@@ -2,10 +2,12 @@
   <div>
     <input type="email" v-model="email" />
 
-    <button @click="submit">Submit</button>
+    <button @click="increment()">Submit</button>
   </div>
 </template>
 
 <script>
-  export default {}
+  export default {
+    methods: {}
+  }
 </script>

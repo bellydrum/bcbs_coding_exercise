@@ -3,11 +3,11 @@ export default class ReqResClient {
 
     async get(endpoint) {
         const url = `${this.baseUrl}/${endpoint}`
+
         try {
             const response = await fetch(url)
 
             if (response.status >= 400) {
-                console.log(response.json())
                 throw new Error("Bad response from server")
             }
 

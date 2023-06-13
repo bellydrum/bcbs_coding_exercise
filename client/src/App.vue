@@ -1,16 +1,19 @@
 <template>
-  <Home msg="Welcome to Your Vue.js App"/>
+  <div>
+    <Navigation />
+  </div>
 </template>
 
 <script>
-import Home from './components/Home.vue'
+  import Navigation from '@/components/Navigation'
 
-export default {
-  name: 'App',
-  components: {
-    Home
+  export default {
+    name: 'App.vue',
+    components: {
+      Navigation
+    },
+    props: {}
   }
-}
 </script>
 
 <style>
@@ -20,6 +23,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
